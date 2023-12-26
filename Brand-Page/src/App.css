@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --red: #d81c28;
+  --grey: #2e2e2e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1280px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+nav {
+  margin-top: 20px;
+  height: 72px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.options {
+  display: flex;
+  align-items: center;
+  gap: 20vw;
+}
+
+.logo {
+  width: fit-content;
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  gap: 24px;
+}
+
+ul li {
+  font-size: 20px;
+  color: #000;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  all: unset; /* reset default styling*/
+  padding: 6px 16px;
+  background: var(--red);
+  height: 32px;
+  color: white;
+  font-weight: 500;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 613px;
+  margin-top: 30px;
+}
+
+.hero-content {
+  margin-top: 35px;
+  max-width: 595px;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.hero-content h1 {
+  color: #000;
+  font-size: 108px;
+  font-weight: 800;
+  line-height: 102px;
+}
+
+.hero-content p {
+  width: 404px;
+  color: var(--GRAY, #5a5959);
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.hero-content .hero-btn {
+  display: flex;
+  gap: 40px;
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.hero-content .hero-btn .category-btn {
+  background-color: white;
+  color: var(--grey);
+  border: 1px solid var(--grey);
+}
+
+.hero-content .shopping p {
+  color: var(--grey);
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.hero-content .shopping .brand-icons {
+  display: flex;
+  gap: 16px;
+}
+
+.hero-image {
+  max-width: 535px;
+  display: grid;
+  place-content: center;
+}
+
+.hero-image img {
+  max-width: 100%;
+}
+
+.hero-image img:hover {
+  transform: scale(1.2);
+}
+
+.menu_bar {
+  display: none;
+}
+
+.menu_mobile {
+  display: none;
+}
+
+@media (max-width: 1080px) {
+  .hero-content h1 {
+    color: #000;
+    font-size: 72px;
+    font-weight: 800;
+    line-height: 80px;
+  }
+
+  .hero-image {
+    min-width: 400px;
+    display: grid;
+    place-content: center;
+  }
+
+  .hero-content p {
+    width: 300px;
+    color: var(--GRAY, #5a5959);
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+}
+
+@media (max-width: 931px) {
+  .hero-content h1 {
+    font-size: 64px;
+  }
+
+  .hero-image {
+    min-width: 350px;
+  }
+}
+
+@media (max-width: 750px) {
+  .hero {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .hero-content {
+    text-align: center;
+    align-items: center;
+  }
+
+  .hero-content p {
+    min-width: 450px;
+  }
+
+  .shopping {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .options {
+    display: none;
+  }
+
+  .menu_bar {
+    display: block;
+    font-size: 36px;
+  }
+
+  .menu_mobile {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    position: fixed;
+    left: 100vw;
+    top: 0px;
+    width: 40vw;
+    height: 100%;
+    padding-top: 30px;
+    background-color: rgb(30, 62, 149);
+    transition: 0.7s ease-in-out;
+  }
+
+  .open {
+    left: 60vw;
+  }
+
+  .menu_mobile ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu_mobile ul li {
+    color: white;
+  }
+
+  .close_btn_container {
+    background-color: white;
+    font-size: 20px;
+    padding: 8px;
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+  }
+}
