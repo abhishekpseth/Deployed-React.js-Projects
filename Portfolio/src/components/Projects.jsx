@@ -8,6 +8,14 @@ const Projects = ({ stack }) => {
         "https://github.com/abhishekpseth/Deployed-React.js-Projects/tree/main/Brand-Page",
       weblink: "https://brand-page-project.netlify.app/",
     },
+    {
+      projectNo: 2,
+      projectName: "Contact Page",
+      imgSrc: "/images/contact-page.jpg",
+      github:
+        "https://github.com/abhishekpseth/Deployed-React.js-Projects/tree/main/Brand-Page",
+      weblink: "https://contactpage-project.netlify.app/",
+    },
   ];
 
   const jsProjectsArray = [
