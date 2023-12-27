@@ -24,6 +24,14 @@ const Projects = ({ stack }) => {
         "https://github.com/abhishekpseth/Deployed-React.js-Projects/tree/main/Dice-Game",
       weblink: "https://guess-dice-game-project.netlify.app/",
     },
+    {
+      projectNo: 4,
+      projectName: "Firebase Contact App-CRUD",
+      imgSrc: "././images/firebase-contact-app.jpg",
+      github:
+        "https://github.com/abhishekpseth/Deployed-React.js-Projects/tree/main/Firebase-Contact-App-CRUD",
+      weblink: "https://firebase-contact-app-crud.netlify.app/",
+    },
   ];
 
   const jsProjectsArray = [
