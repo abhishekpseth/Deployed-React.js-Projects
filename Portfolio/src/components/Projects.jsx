@@ -3,7 +3,7 @@ const Projects = ({ stack }) => {
     {
       projectNo: 1,
       projectName: "Brand Page",
-      imgSrc: "/images/brand-page.jpg",
+      imgSrc: "././images/brand-page.jpg",
       github:
         "https://github.com/abhishekpseth/Deployed-React.js-Projects/tree/main/Brand-Page",
       weblink: "https://brand-page-project.netlify.app/",
@@ -11,7 +11,7 @@ const Projects = ({ stack }) => {
     {
       projectNo: 2,
       projectName: "Contact Page",
-      imgSrc: "/images/contact-page.jpg",
+      imgSrc: "././images/contact-page.jpg",
       github:
         "https://github.com/abhishekpseth/Deployed-React.js-Projects/tree/main/Contact-Page",
       weblink: "https://contactpage-project.netlify.app/",
@@ -22,7 +22,7 @@ const Projects = ({ stack }) => {
     {
       projectNo: 1,
       projectName: "Life Timer",
-      imgSrc: "/images/life-timer.jpg",
+      imgSrc: "././images/life-timer.jpg",
       github:
         "https://github.com/abhishekpseth/JS-Projects--deployed/tree/main/Life%20timer",
       weblink: "https://lifetimer-project.netlify.app/",
@@ -30,7 +30,7 @@ const Projects = ({ stack }) => {
     {
       projectNo: 2,
       projectName: "Github Profile Viewer",
-      imgSrc: "/images/github-profile-viewer.jpg",
+      imgSrc: "././images/github-profile-viewer.jpg",
       github:
         "https://github.com/abhishekpseth/JS-Projects--deployed/tree/main/Github%20Profile%20Viewer",
       weblink: "https://search-github-profile-project.netlify.app/",
@@ -38,7 +38,7 @@ const Projects = ({ stack }) => {
     {
       projectNo: 3,
       projectName: "Search & Filter",
-      imgSrc: "/images/fetch-product.jpg",
+      imgSrc: "././images/fetch-product.jpg",
       github:
         "https://github.com/abhishekpseth/JS-Projects--deployed/tree/main/Fetch%20Products%20Search%20%26%20Filter",
       weblink: "https://fetchproduct-searchandfilter-project.netlify.app/",
@@ -46,7 +46,7 @@ const Projects = ({ stack }) => {
     {
       projectNo: 4,
       projectName: "QR Code Generator",
-      imgSrc: "/images/qr-code.jpg",
+      imgSrc: "././images/qr-code.jpg",
       github:
         "https://github.com/abhishekpseth/JS-Projects--deployed/tree/main/QR%20Code%20Generator",
       weblink: "https://qrcode-generatorproject.netlify.app/",
@@ -54,7 +54,7 @@ const Projects = ({ stack }) => {
     {
       projectNo: 5,
       projectName: "Expense Tracker",
-      imgSrc: "/images/expense-tracker.jpg",
+      imgSrc: "././images/expense-tracker.jpg",
       github:
         "https://github.com/abhishekpseth/JS-Projects--deployed/tree/main/Expense%20Tracker",
       weblink: "https://trackyourexpenses-project.netlify.app/",
@@ -62,7 +62,7 @@ const Projects = ({ stack }) => {
     {
       projectNo: 6,
       projectName: "Password Generator",
-      imgSrc: "/images/passwordGenerator.jpg",
+      imgSrc: "././images/passwordGenerator.jpg",
       github:
         "https://github.com/abhishekpseth/JS-Projects--deployed/tree/main/Password%20Generator",
       weblink: "https://generatepasswords-project.netlify.app/",
@@ -70,7 +70,7 @@ const Projects = ({ stack }) => {
     {
       projectNo: 7,
       projectName: "Analog Clock",
-      imgSrc: "/images/analog-clock.jpg",
+      imgSrc: "././images/analog-clock.jpg",
       github:
         "https://github.com/abhishekpseth/JS-Projects--deployed/tree/main/Analog%20Clock",
       weblink: "https://classic-analogclock-project.netlify.app/",
@@ -78,7 +78,7 @@ const Projects = ({ stack }) => {
     {
       projectNo: 8,
       projectName: "Tic Tac Toe",
-      imgSrc: "/images/tic-tac-toe.jpg",
+      imgSrc: "././images/tic-tac-toe.jpg",
       github:
         "https://github.com/abhishekpseth/JS-Projects--deployed/tree/main/Tic%20Tac%20Toe",
       weblink: "https://tic-tac-toe-prject.netlify.app/",

@@ -18,7 +18,7 @@ const App = () => {
         <main className="h-[83vh] grid place-content-center">
           <div className="flex justify-center items-center gap-12 text-center">
             <img
-              src="/images/profile-pic.JPG"
+              src="././images/profile-pic.JPG"
               alt="File Picture"
               className="h-[400px] w-[400px] rounded-full"
             />
