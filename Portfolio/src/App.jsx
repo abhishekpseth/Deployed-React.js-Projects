@@ -152,9 +152,15 @@ const App = () => {
         </nav>
 
         <div className="flex flex-end text-[40px] w-[100%] mt-[60px]">
+          <h1 className="bg-red-500 p-[10px]">React.js Projects</h1>
+        </div>
+
+        <Projects stack="reactjs" />
+
+        <div className="flex flex-end text-[40px] w-[100%] mt-[60px]">
           <h1 className="bg-red-500 p-[10px]">JS Projects</h1>
         </div>
-        <Projects stack="JS" />
+        <Projects stack="js" />
       </section>
 
       <section id="contact" className="h-[80vh] grid place-content-center">

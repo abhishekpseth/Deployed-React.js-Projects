@@ -1,5 +1,16 @@
-const Projects = () => {
-  const projectsArray = [
+const Projects = ({ stack }) => {
+  const reactProjectsArray = [
+    {
+      projectNo: 1,
+      projectName: "Brand Page",
+      imgSrc: "/images/brand-page.jpg",
+      github:
+        "https://github.com/abhishekpseth/Deployed-React.js-Projects/tree/main/Brand-Page",
+      weblink: "https://brand-page-project.netlify.app/",
+    },
+  ];
+
+  const jsProjectsArray = [
     {
       projectNo: 1,
       projectName: "Life Timer",
@@ -66,25 +77,28 @@ const Projects = () => {
     },
   ];
 
+  const stackProjectsArray =
+    stack === "reactjs" ? reactProjectsArray : jsProjectsArray;
+
   return (
     <main className="w-[100%] flex flex-wrap gap-[40px] mt-[60px] justify-center items-center">
-      {projectsArray.map((_, index) => (
+      {stackProjectsArray.map((_, index) => (
         <div className="px-[2rem] py-[1.5rem] gap-[15px] flex flex-col justify-center items-center border border-1 border-gray rounded-[40px] bg-extraDrakGray">
           <img
-            src={projectsArray[index].imgSrc}
+            src={stackProjectsArray[index].imgSrc}
             className="w-[300px] h-[300px] border rounded-[36px]"
           />
           <h1 className="text-[28px] font-bold max-w-[300px]">
-            {projectsArray[index].projectName}
+            {stackProjectsArray.projectName}
           </h1>
           <div className="flex gap-7">
-            <a href={projectsArray[index].weblink} target="_blank">
+            <a href={stackProjectsArray[index].weblink} target="_blank">
               <button className="p-3 border rounded-3xl font font-medium">
                 Live Demo
               </button>
             </a>
 
-            <a href={projectsArray[index].github} target="_blank">
+            <a href={stackProjectsArray[index].github} target="_blank">
               <button className="p-3 border rounded-3xl font font-medium">
                 Github
               </button>
