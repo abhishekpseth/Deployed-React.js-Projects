@@ -31,9 +31,15 @@ const App = () => {
                 Frontend Developer
               </h2>
               <div className="flex gap-4 justify-center items-center">
-                {/* <button className="p-3 border rounded-3xl font font-medium">
-                  Download CV
-                </button> */}
+                <a
+                  href="https://drive.google.com/file/d/1y7kVzO8NGRvfQ-hTbgmBHNndqIWbcUzf/view?usp=drive_link"
+                  target="_blank"
+                >
+                  <button className="p-3 border rounded-3xl font font-medium">
+                    Download CV
+                  </button>
+                </a>
+
                 <a href="#contact">
                   <button className="p-3 border rounded-3xl font font-medium text-white bg-darkGray">
                     Contact Info
