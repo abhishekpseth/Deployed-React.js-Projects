@@ -13,7 +13,7 @@ const Projects = ({ stack }) => {
       projectName: "Contact Page",
       imgSrc: "/images/contact-page.jpg",
       github:
-        "https://github.com/abhishekpseth/Deployed-React.js-Projects/tree/main/Brand-Page",
+        "https://github.com/abhishekpseth/Deployed-React.js-Projects/tree/main/Contact-Page",
       weblink: "https://contactpage-project.netlify.app/",
     },
   ];
