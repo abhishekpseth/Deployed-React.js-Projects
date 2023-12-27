@@ -16,6 +16,14 @@ const Projects = ({ stack }) => {
         "https://github.com/abhishekpseth/Deployed-React.js-Projects/tree/main/Contact-Page",
       weblink: "https://contactpage-project.netlify.app/",
     },
+    {
+      projectNo: 3,
+      projectName: "Dice Game",
+      imgSrc: "././images/dice-game.jpg",
+      github:
+        "https://github.com/abhishekpseth/Deployed-React.js-Projects/tree/main/Dice-Game",
+      weblink: "https://guess-dice-game-project.netlify.app/",
+    },
   ];
 
   const jsProjectsArray = [
