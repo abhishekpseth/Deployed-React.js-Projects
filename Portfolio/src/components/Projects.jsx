@@ -53,7 +53,7 @@ const Projects = ({ stack }) => {
     },
     {
       projectNo: 3,
-      projectName: "Search & Filter",
+      projectName: "Product Search & Filter",
       imgSrc: "././images/fetch-product.jpg",
       github:
         "https://github.com/abhishekpseth/JS-Projects--deployed/tree/main/Fetch%20Products%20Search%20%26%20Filter",
@@ -99,6 +99,14 @@ const Projects = ({ stack }) => {
         "https://github.com/abhishekpseth/JS-Projects--deployed/tree/main/Tic%20Tac%20Toe",
       weblink: "https://tic-tac-toe-prject.netlify.app/",
     },
+    {
+      projectNo: 9,
+      projectName: "Circular Carousel",
+      imgSrc: "././images/carousel.jpg",
+      github:
+        "https://github.com/abhishekpseth/Deployed-JS-projects/tree/main/Carousel",
+      weblink: "https://circular-carousel-project.netlify.app/",
+    },
   ];
 
   const stackProjectsArray =
@@ -107,23 +115,23 @@ const Projects = ({ stack }) => {
   return (
     <main className="w-[100%] flex flex-wrap gap-[40px] mt-[60px] justify-center items-center">
       {stackProjectsArray.map((_, index) => (
-        <div className="px-[2rem] py-[1.5rem] gap-[15px] flex flex-col justify-center items-center border border-1 border-gray rounded-[40px] bg-extraDrakGray">
+        <div className="px-[1.5rem] py-[1rem] gap-[15px] flex flex-col justify-center items-center border border-1 border-gray rounded-[40px] bg-extraDrakGray">
           <img
             src={stackProjectsArray[index].imgSrc}
             className="w-[300px] h-[300px] border rounded-[36px]"
           />
-          <h1 className="text-[28px] font-bold max-w-[300px]">
-            {stackProjectsArray.projectName}
+          <h1 className="text-[20px] font-bold max-w-[300px]">
+            {stackProjectsArray[index].projectName}
           </h1>
           <div className="flex gap-7">
             <a href={stackProjectsArray[index].weblink} target="_blank">
-              <button className="p-3 border rounded-3xl font font-medium">
+              <button className="w-[95px] h-[50px] border rounded-3xl font font-medium">
                 Live Demo
               </button>
             </a>
 
             <a href={stackProjectsArray[index].github} target="_blank">
-              <button className="p-3 border rounded-3xl font font-medium">
+              <button className="w-[95px] h-[50px] border rounded-3xl font font-medium">
                 Github
               </button>
             </a>
