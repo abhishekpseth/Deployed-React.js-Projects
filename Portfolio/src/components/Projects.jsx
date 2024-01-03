@@ -26,7 +26,7 @@ const Projects = ({ stack }) => {
     },
     {
       projectNo: 4,
-      projectName: "Firebase Contact App-CRUD",
+      projectName: "Firebase Contact App",
       imgSrc: "././images/firebase-contact-app.jpg",
       github:
         "https://github.com/abhishekpseth/Deployed-React.js-Projects/tree/main/Firebase-Contact-App-CRUD",
@@ -115,10 +115,10 @@ const Projects = ({ stack }) => {
   return (
     <main className="w-[100%] flex flex-wrap gap-[40px] mt-[60px] justify-center items-center">
       {stackProjectsArray.map((_, index) => (
-        <div className="px-[1.5rem] py-[1rem] gap-[15px] flex flex-col justify-center items-center border border-1 border-gray rounded-[40px] bg-extraDrakGray">
+        <div className="px-[1.5rem] py-[1rem] gap-[15px] flex flex-col justify-center items-center border border-1 border-gray rounded-[32px] bg-extraDrakGray">
           <img
             src={stackProjectsArray[index].imgSrc}
-            className="w-[300px] h-[300px] border rounded-[36px]"
+            className="w-[250px] h-[250px] border rounded-[28px]"
           />
           <h1 className="text-[20px] font-bold max-w-[300px]">
             {stackProjectsArray[index].projectName}

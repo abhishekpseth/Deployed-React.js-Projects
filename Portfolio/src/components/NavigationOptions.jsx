@@ -1,8 +1,14 @@
 import React from "react";
 
-const NavigationOptions = () => {
+const NavigationOptions = ({ direction }) => {
   return (
-    <ul className="flex justify-between gap-[2rem] text-[24px]">
+    <ul
+      className={`flex justify-between items-center text-[24px] ${
+        direction === "vertical"
+          ? "flex-col text-white gap-[8px]"
+          : "gap-[16px]"
+      }`}
+    >
       <a href="#about">
         <li>About</li>
       </a>
