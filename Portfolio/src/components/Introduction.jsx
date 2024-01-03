@@ -15,13 +15,18 @@ const Introduction = () => {
   return (
     <>
       <nav className="flex h-[17vh] justify-between items-center xl:px-[120px]">
-        <h1 className="text-[32px]">Abhishek Seth</h1>
+        <h1 className="text-[24px] sm:text-[28px] md:text-[32px]">
+          Abhishek Seth
+        </h1>
         <div className="hidden md:block">
           <NavigationOptions direction="horizontal" />
         </div>
 
         {!showDrawer && (
-          <div className="text-[36px] md:hidden" onClick={onClose}>
+          <div
+            className="text-[24px] sm:text-[28px] md:hidden"
+            onClick={onClose}
+          >
             <FaBars />
           </div>
         )}
@@ -44,12 +49,12 @@ const Introduction = () => {
             alt="File Picture"
             className="h-[250px] w-[250px] rounded-full lg:h-[400px] lg:w-[400px] md:h-[300px] md:w-[300px]"
           />
-          <div className="flex flex-col gap-[1rem]">
+          <div className="flex flex-col gap-[4px]">
             <p className="text-gray font-medium">Hello, I'm</p>
-            <h1 className="font font-semibold text-4xl ">
+            <h1 className="font font-semibold text-[26px] sm:text-4xl">
               Abhishek Prasad Seth
             </h1>
-            <h2 className="text-gray font font-semibold text-[28px]">
+            <h2 className="text-gray font font-semibold text-[24px] sm:text-[28px]">
               Frontend Developer
             </h2>
             <div className="flex gap-4 justify-center items-center">

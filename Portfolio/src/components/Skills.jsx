@@ -7,8 +7,10 @@ const Skills = () => {
     <>
       <div className="w-[80%] md:w-[50%]">
         <div className="flex flex-col justify-center items-center text-center">
-          <p className="text-gray">Get to know More</p>
-          <h1 className="text-5xl font-bold">About Me</h1>
+          <p className="text-gray text-[16px] sm:text-[20px]">
+            Get to know More
+          </p>
+          <h1 className="text-3xl sm:text-5xl font-bold">About Me</h1>
         </div>
 
         <div className="flex flex-col justify-center items-center gap-[60px] mt-[40px]">
@@ -30,8 +32,8 @@ const Skills = () => {
 
       <div className="w-[100%] md:w-[50%] ">
         <div className="flex flex-col justify-center items-center text-center">
-          <p className="text-gray">Explore My</p>
-          <h1 className="text-5xl font-bold">Skills</h1>
+          <p className="text-gray text-[16px] sm:text-[20px]">Explore My</p>
+          <h1 className="text-3xl sm:text-5xl font-bold">Skills</h1>
         </div>
 
         <div className="flex justify-center">
