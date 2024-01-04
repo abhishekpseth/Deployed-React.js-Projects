@@ -1,23 +1,32 @@
-import {
-  NavigationOptions,
-  Introduction,
-  Skills,
-  ProjectArea,
-  ContactArea,
-} from "./components";
+import { Introduction, Skills, ProjectArea, ContactArea } from "./components";
+import { useEffect, useState } from "react";
+import { ThemeProvider } from "./contexts/theme";
 
 const App = () => {
+  const [themeMode, setThemeMode] = useState("light");
+
+  const lightTheme = () => {
+    setThemeMode("light");
+  };
+
+  const darkTheme = () => {
+    setThemeMode("dark");
+  };
+
+  useEffect(() => {
+    // here theme changes
+    document.querySelector("html").classList.remove("light", "dark");
+    document.querySelector("html").classList.add(themeMode);
+  }, [themeMode]);
+
   return (
-    <>
-      <div className="px-[30px] lg:px-[130px] md:px-[60px]">
+    <ThemeProvider value={{ themeMode, lightTheme, darkTheme }}>
+      <div className="px-[30px] lg:px-[130px] md:px-[60px] dark:bg-black">
         <section className="min-h-[100vh] ">
           <Introduction />
         </section>
 
-        <section
-          id="about"
-          className="min-h-[100vh] flex flex-col justify-center items-center gap-[100px] py-[40px] md:flex-row md:pt-[120px]"
-        >
+        <section id="about" className="min-h-[100vh]">
           <Skills />
         </section>
 
@@ -28,12 +37,12 @@ const App = () => {
           <ProjectArea />
         </section>
 
-        {/* <section id="contact" className="h-[80vh] grid place-content-center">
-        <ContactArea />
-      </section> */}
+        <section id="contact" className="h-[80vh] grid place-content-center">
+          <ContactArea />
+        </section>
       </div>
-      <footer className="h-[10vh] mt-[24px] grid place-content-center bg-yellow-300"></footer>
-    </>
+      <footer className="h-[5vh] grid place-content-center bg-yellow-400"></footer>
+    </ThemeProvider>
   );
 };
 

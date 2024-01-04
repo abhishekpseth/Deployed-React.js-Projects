@@ -14,7 +14,7 @@ const Introduction = () => {
 
   return (
     <>
-      <nav className="flex h-[17vh] justify-between items-center xl:px-[120px]">
+      <nav className="flex h-[17vh] justify-between items-center xl:px-[120px] dark:text-white">
         <h1 className="text-[24px] sm:text-[28px] md:text-[32px]">
           Abhishek Seth
         </h1>
@@ -32,11 +32,11 @@ const Introduction = () => {
         )}
 
         <div
-          className={`flex flex-col items-center gap-[20px] fixed left-[100vw] top-[0px] w-[40vw] h-[100%] pt-[30px] bg-yellow-400  transition-left ${
+          className={`flex flex-col items-center gap-[20px] fixed left-[100vw] top-[0px] w-[40vw] h-[100%] pt-[30px] bg-yellow-400 transition-left ${
             showDrawer ? "left-[60vw]" : ""
           } md:hidden`}
         >
-          <div className="bg-white text-[20px] p-[8px] rounded-full grid place-content-center">
+          <div className="bg-white text-[20px] p-[8px] rounded-full grid place-content-center dark:text-black">
             <ImCross onClick={onClose} />
           </div>
           <NavigationOptions direction="vertical" />
@@ -51,7 +51,7 @@ const Introduction = () => {
           />
           <div className="flex flex-col gap-[4px]">
             <p className="text-gray font-medium">Hello, I'm</p>
-            <h1 className="font font-semibold text-[26px] sm:text-4xl">
+            <h1 className="font font-semibold text-[26px] sm:text-4xl dark:text-white">
               Abhishek Prasad Seth
             </h1>
             <h2 className="text-gray font font-semibold text-[24px] sm:text-[28px]">
@@ -62,18 +62,18 @@ const Introduction = () => {
                 href="https://drive.google.com/file/d/1y7kVzO8NGRvfQ-hTbgmBHNndqIWbcUzf/view?usp=drive_link"
                 target="_blank"
               >
-                <button className="p-3 border rounded-3xl font font-medium">
+                <button className="p-3 border rounded-3xl font font-medium dark:text-white dark:border-color-white">
                   Download CV
                 </button>
               </a>
 
               <a href="#contact">
-                <button className="p-3 border rounded-3xl font font-medium text-white bg-darkGray">
+                <button className="p-3 border rounded-3xl font font-medium text-white bg-darkGray dark:text-white dark:border-color-white dark:bg-black">
                   Contact Info
                 </button>
               </a>
             </div>
-            <div className="flex gap-4 justify-center items-center">
+            <div className="flex gap-4 justify-center items-center dark:text-white">
               <a
                 href="https://www.linkedin.com/in/abhishek-p-seth/"
                 target="_blank"

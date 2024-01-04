@@ -4,26 +4,28 @@ import { FaCircleCheck } from "react-icons/fa6";
 
 const Skills = () => {
   return (
-    <>
+    <div className="flex flex-col justify-center gap-[100px] py-[40px] md:flex-row md:pt-[120px] dark:text-white">
       <div className="w-[80%] md:w-[50%]">
         <div className="flex flex-col justify-center items-center text-center">
-          <p className="text-gray text-[16px] sm:text-[20px]">
-            Get to know More
-          </p>
+          <p className="c text-[16px] sm:text-[20px]">Get to know More</p>
           <h1 className="text-3xl sm:text-5xl font-bold">About Me</h1>
         </div>
 
         <div className="flex flex-col justify-center items-center gap-[60px] mt-[40px]">
           <div className="w-[90%] py-[20px] px-[20px] flex flex-col justify-center items-center text-center border border-1 border-gray rounded-2xl">
-            <BsPersonWorkspace />
-            <h3 className="font-bold">Experience</h3>
+            <div className="text-gray">
+              <BsPersonWorkspace />
+            </div>
+            <h3 className="font-bold text-gray">Experience</h3>
             <p>Fresher</p>
             <p>Frontend Developer</p>
           </div>
 
           <div className=" w-[90%] py-[20px] flex flex-col justify-center items-center text-center border border-1 border-gray rounded-2xl">
-            <HiAcademicCap />
-            <h3 className="font-bold">Education</h3>
+            <div className="text-gray">
+              <HiAcademicCap />
+            </div>
+            <h3 className="font-bold text-gray">Education</h3>
             <p>B.Tech</p>
             <p>Motilal Nehru National Institute of Technology</p>
           </div>
@@ -84,7 +86,7 @@ const Skills = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

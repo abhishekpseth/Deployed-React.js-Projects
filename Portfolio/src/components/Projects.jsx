@@ -115,7 +115,7 @@ const Projects = ({ stack }) => {
   return (
     <main className="w-[100%] flex flex-wrap gap-[40px] mt-[60px] justify-center items-center">
       {stackProjectsArray.map((_, index) => (
-        <div className="px-[1.5rem] py-[1rem] gap-[15px] flex flex-col justify-center items-center border border-1 border-gray rounded-[32px] bg-extraDrakGray">
+        <div className="px-[1.5rem] py-[1rem] gap-[15px] flex flex-col justify-center items-center border border-1 border-gray rounded-[32px] bg-extraDrakGray dark:text-white">
           <img
             src={stackProjectsArray[index].imgSrc}
             className="w-[250px] h-[250px] border rounded-[28px]"
@@ -125,13 +125,13 @@ const Projects = ({ stack }) => {
           </h1>
           <div className="flex gap-7">
             <a href={stackProjectsArray[index].weblink} target="_blank">
-              <button className="w-[95px] h-[50px] border rounded-3xl font font-medium">
+              <button className="w-[95px] h-[50px] border rounded-3xl font font-medium dark:border-gray">
                 Live Demo
               </button>
             </a>
 
             <a href={stackProjectsArray[index].github} target="_blank">
-              <button className="w-[95px] h-[50px] border rounded-3xl font font-medium">
+              <button className="w-[95px] h-[50px] border rounded-3xl font font-medium dark:border-gray">
                 Github
               </button>
             </a>
