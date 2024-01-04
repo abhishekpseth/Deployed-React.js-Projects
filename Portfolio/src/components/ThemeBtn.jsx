@@ -12,7 +12,7 @@ export default function ThemeBtn({ direction }) {
   };
   return (
     <button
-      className={`p-[4px] rounded-lg ${
+      className={`p-[4px] rounded-lg border-none ${
         themeMode === "light"
           ? "bg-black text-white"
           : direction === "vertical"

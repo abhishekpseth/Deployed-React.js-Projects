@@ -1,10 +1,34 @@
 import { BsPersonWorkspace } from "react-icons/bs";
 import { HiAcademicCap } from "react-icons/hi2";
 import { FaCircleCheck } from "react-icons/fa6";
+import SkillItem from "./SkillItem";
 
 const Skills = () => {
+  const skillsList = [
+    {
+      skill: "HTML",
+      rating: "Experienced",
+    },
+    {
+      skill: "CSS",
+      rating: "Experienced",
+    },
+    {
+      skill: "JS",
+      rating: "Intermediate",
+    },
+    {
+      skill: "React",
+      rating: "Beginner",
+    },
+    {
+      skill: "GIT",
+      rating: "Intermediate",
+    },
+  ];
+
   return (
-    <div className="flex flex-col justify-center items-center sm:items-start gap-[100px] py-[40px] md:flex-row md:pt-[120px] dark:text-white">
+    <div className=" flex flex-col justify-center items-center md:items-start gap-[100px] py-[40px] md:flex-row md:pt-[120px] dark:text-white">
       <div className="w-[80%] md:w-[50%]">
         <div className="flex flex-col justify-center items-center text-center">
           <p className="c text-[16px] sm:text-[20px]">Get to know More</p>
@@ -44,44 +68,13 @@ const Skills = () => {
               Frontend Development
             </h3>
             <div className="flex flex-col gap-[20px]">
-              <div className="flex gap-[8px]">
-                <FaCircleCheck />
-                <div className="flex flex-col">
-                  <h5 className="font-bold h-[16px] flex items-center">HTML</h5>
-                  <h6 className="text-gray">Experienced</h6>
-                </div>
-              </div>
-
-              <div className="flex gap-[8px]">
-                <FaCircleCheck />
-                <div className="flex flex-col">
-                  <h5 className="font-bold h-[16px] flex items-center">CSS</h5>
-                  <h6 className="text-gray">Experienced</h6>
-                </div>
-              </div>
-              <div className="flex gap-[8px]">
-                <FaCircleCheck />
-                <div className="flex flex-col">
-                  <h5 className="font-bold h-[16px] flex items-center">JS</h5>
-                  <h6 className="text-gray">Intermediate</h6>
-                </div>
-              </div>
-              <div className="flex gap-[8px]">
-                <FaCircleCheck />
-                <div className="flex flex-col">
-                  <h5 className="font-bold h-[16px] flex items-center">
-                    React
-                  </h5>
-                  <h6 className="text-gray">Beginner</h6>
-                </div>
-              </div>
-              <div className="flex gap-[8px]">
-                <FaCircleCheck />
-                <div className="flex flex-col">
-                  <h5 className="font-bold h-[16px] flex items-center">Git</h5>
-                  <h6 className="text-gray">Intermediate</h6>
-                </div>
-              </div>
+              {skillsList.map((skill, index) => (
+                <SkillItem
+                  key={index}
+                  skill={skill.skill}
+                  rating={skill.rating}
+                />
+              ))}
             </div>
           </div>
         </div>

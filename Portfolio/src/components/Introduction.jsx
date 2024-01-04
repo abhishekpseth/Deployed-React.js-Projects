@@ -4,6 +4,7 @@ import { FaBars } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
 import { useState } from "react";
 import NavigationOptions from "./NavigationOptions";
+import Button from "./Button";
 
 const Introduction = () => {
   const [showDrawer, setShowDrawer] = useState(false);
@@ -58,20 +59,21 @@ const Introduction = () => {
               Frontend Developer
             </h2>
             <div className="flex gap-4 justify-center items-center">
-              <a
-                href="https://drive.google.com/file/d/1y7kVzO8NGRvfQ-hTbgmBHNndqIWbcUzf/view?usp=drive_link"
+              <Button
+                section="introduction"
+                text="Download CV"
+                color="white"
+                link="https://drive.google.com/file/d/1y7kVzO8NGRvfQ-hTbgmBHNndqIWbcUzf/view?usp=drive_link"
                 target="_blank"
-              >
-                <button className="p-3 border rounded-3xl font font-medium dark:text-white dark:border-color-white">
-                  Download CV
-                </button>
-              </a>
+              />
 
-              <a href="#contact">
-                <button className="p-3 border rounded-3xl font font-medium text-white bg-darkGray dark:text-white dark:border-color-white dark:bg-black">
-                  Contact Info
-                </button>
-              </a>
+              <Button
+                section="introduction"
+                text="Contact Info"
+                color="dark"
+                link="#contact"
+                target=""
+              />
             </div>
             <div className="flex gap-4 justify-center items-center dark:text-white">
               <a

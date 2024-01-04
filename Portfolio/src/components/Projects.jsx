@@ -1,4 +1,7 @@
-const Projects = ({ stack }) => {
+import { useEffect } from "react";
+import Button from "./Button";
+
+const Projects = ({ sortOption, stack }) => {
   const reactProjectsArray = [
     {
       projectNo: 1,
@@ -109,33 +112,70 @@ const Projects = ({ stack }) => {
     },
   ];
 
-  const stackProjectsArray =
-    stack === "reactjs" ? reactProjectsArray : jsProjectsArray;
+  const sortProjects = (projects) => {
+    const sortedProjects = [...projects];
+
+    switch (sortOption) {
+      case "alphaInc":
+        sortedProjects.sort((a, b) =>
+          a.projectName.localeCompare(b.projectName)
+        );
+        break;
+      case "alphaDec":
+        sortedProjects.sort((a, b) =>
+          b.projectName.localeCompare(a.projectName)
+        );
+        break;
+      case "dateInc":
+        sortedProjects.sort((a, b) => a.projectNo - b.projectNo);
+        break;
+      default:
+        sortedProjects.sort((a, b) => b.projectNo - a.projectNo);
+        break;
+    }
+
+    return sortedProjects;
+  };
+
+  let stackProjectsArray =
+    stack === "React.js" ? reactProjectsArray : jsProjectsArray;
+  stackProjectsArray = sortProjects(stackProjectsArray);
 
   return (
-    <main className="w-[100%] flex flex-wrap gap-[40px] mt-[60px] justify-center items-center">
+    <main className="w-[100%] flex flex-wrap gap-[40px] mt-[20px] justify-center items-center">
       {stackProjectsArray.map((_, index) => (
         <div key={stackProjectsArray[index].projectNo}>
           <div className="px-[1rem] py-[1rem] gap-[8px] flex flex-col justify-center items-center border border-1 border-gray rounded-[32px] bg-extraDrakGray dark:text-white">
-            <img
-              src={stackProjectsArray[index].imgSrc}
-              className="w-[250px] h-[250px] border rounded-[28px]"
-            />
+            {stack === "JS" && stackProjectsArray[index].projectNo === 7 ? (
+              <iframe
+                className="w-[250px] h-[250px] border rounded-[28px]"
+                src="https://classic-analogclock-project.netlify.app/"
+              ></iframe>
+            ) : (
+              <img
+                src={stackProjectsArray[index].imgSrc}
+                className="w-[250px] h-[250px] border rounded-[28px]"
+              />
+            )}
             <h1 className="text-[20px] font-bold max-w-[300px]">
               {stackProjectsArray[index].projectName}
             </h1>
             <div className="flex gap-7">
-              <a href={stackProjectsArray[index].weblink} target="_blank">
-                <button className="w-[95px] h-[50px] border rounded-3xl font font-medium dark:border-gray">
-                  Live Demo
-                </button>
-              </a>
+              <Button
+                section="projects"
+                text="Live Demo"
+                color="white"
+                link={stackProjectsArray[index].weblink}
+                target="_blank"
+              />
 
-              <a href={stackProjectsArray[index].github} target="_blank">
-                <button className="w-[95px] h-[50px] border rounded-3xl font font-medium dark:border-gray">
-                  Github
-                </button>
-              </a>
+              <Button
+                section="projects"
+                text="Github"
+                color="white"
+                link={stackProjectsArray[index].github}
+                target="_blank"
+              />
             </div>
           </div>
         </div>

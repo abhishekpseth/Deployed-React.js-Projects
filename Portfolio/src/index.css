@@ -15,6 +15,10 @@ body {
   scroll-behavior: smooth;
 }
 
+.dark {
+  cursor: crosshair;
+}
+
 .transition-left {
   transition: left 0.7s ease-in-out;
 }
