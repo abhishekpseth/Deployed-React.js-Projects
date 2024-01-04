@@ -13,8 +13,6 @@ html,
 body {
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
-  position: relative;
-  z-index: 2;
 }
 
 .dark {
