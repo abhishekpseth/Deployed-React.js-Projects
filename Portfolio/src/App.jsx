@@ -21,6 +21,7 @@ const App = () => {
 
   return (
     <ThemeProvider value={{ themeMode, lightTheme, darkTheme }}>
+      
       <div className="px-[30px] lg:px-[130px] md:px-[60px] dark:bg-black">
         <section className="min-h-[100vh] ">
           <Introduction />
@@ -40,8 +41,8 @@ const App = () => {
         <section id="contact" className="h-[80vh] grid place-content-center">
           <ContactArea />
         </section>
+        {/* <footer className="h-[5vh] grid place-content-center bg-yellow-400"></footer> */}
       </div>
-      <footer className="h-[5vh] grid place-content-center bg-yellow-400"></footer>
     </ThemeProvider>
   );
 };

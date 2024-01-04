@@ -6,3 +6,4 @@ import ContactArea from "./ContactArea";
 import Button from "./Button";
 
 export { NavigationOptions, Introduction, Skills, ProjectArea,ContactArea, Button };
+
