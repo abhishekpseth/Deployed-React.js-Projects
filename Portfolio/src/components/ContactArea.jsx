@@ -10,7 +10,7 @@ const ContactArea = () => {
           Contact Me
         </h1>
       </nav>
-      <main className="px-[12px] py-[12px] sm:px-[1rem] sm:py-[1rem] mt-[40px] flex flex-col gap-[10px] justify-center items-center border border-1 border-gray rounded-[40px] dark:text-white">
+      <main className="px-[16px] py-[16px] mt-[40px] flex flex-col gap-[10px] justify-center items-center border border-1 border-gray rounded-[40px] dark:text-white">
         <div className="flex gap-[8px] items-center">
           <ImMail4 className="text-xl sm:text-4xl dark:text-gray" />
           <h1 className="text-sm sm:text-2xl">abhishekpseth@gmail.com</h1>

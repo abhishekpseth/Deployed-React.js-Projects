@@ -4,7 +4,7 @@ import { FaCircleCheck } from "react-icons/fa6";
 
 const Skills = () => {
   return (
-    <div className="flex flex-col justify-center gap-[100px] py-[40px] md:flex-row md:pt-[120px] dark:text-white">
+    <div className="flex flex-col justify-center items-center sm:items-start gap-[100px] py-[40px] md:flex-row md:pt-[120px] dark:text-white">
       <div className="w-[80%] md:w-[50%]">
         <div className="flex flex-col justify-center items-center text-center">
           <p className="c text-[16px] sm:text-[20px]">Get to know More</p>

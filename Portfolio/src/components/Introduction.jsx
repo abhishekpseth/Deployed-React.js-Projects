@@ -43,7 +43,7 @@ const Introduction = () => {
         </div>
       </nav>
       <main className="h-[83vh] grid place-content-center ">
-        <div className="flex flex-col justify-center items-center gap-12 text-center lg:flex-row">
+        <div className="flex flex-col justify-center items-center gap-8 text-center lg:flex-row">
           <img
             src="././images/profile-pic.JPG"
             alt="File Picture"
