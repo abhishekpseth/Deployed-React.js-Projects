@@ -33,7 +33,7 @@ const Introduction = () => {
         )}
 
         <div
-          className={`flex flex-col items-center gap-[20px] fixed left-[100vw] top-[0px] w-[40vw] h-[100%] pt-[30px] bg-yellow-400 transition-left ${
+          className={`z-10 flex flex-col items-center gap-[20px] fixed left-[100vw] top-[0px] w-[40vw] h-[100%] pt-[30px] bg-yellow-400 transition-left ${
             showDrawer ? "left-[60vw]" : ""
           } md:hidden`}
         >
