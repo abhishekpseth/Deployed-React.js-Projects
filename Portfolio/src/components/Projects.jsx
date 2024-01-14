@@ -35,6 +35,13 @@ const Projects = ({ sortOption, stack }) => {
         "https://github.com/abhishekpseth/Deployed-React.js-Projects/tree/main/Firebase-Contact-App-CRUD",
       weblink: "https://firebase-contact-app-crud.netlify.app/",
     },
+    {
+      projectNo: 5,
+      projectName: "Code Editor",
+      imgSrc: "././images/code-editor.jpg",
+      github: "https://github.com/abhishekpseth/Deployed-React.js-Projects/tree/main/Code%20Editor",
+      weblink: "https://codeeditor-project.netlify.app/",
+    }
   ];
 
   const jsProjectsArray = [
