@@ -3,6 +3,8 @@ import { DiHtml5, DiVim } from "react-icons/di";
 import { FaCss3Alt } from "react-icons/fa";
 import { DiJavascript } from "react-icons/di";
 import { FaTrash } from "react-icons/fa";
+import { BiSolidCopy } from "react-icons/bi";
+
 import Split from "react-split";
 import CodeMirror from "@uiw/react-codemirror";
 
@@ -13,6 +15,8 @@ import { vscodeDark } from "@uiw/codemirror-theme-vscode";
 import { material } from "@uiw/codemirror-theme-material";
 import { dracula } from "@uiw/codemirror-theme-dracula";
 import EditorContext from "../context/EditorContext";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import JSZip from "jszip";
 
 const CodeSpace = ({ layout, setSrcDoc }) => {
@@ -185,11 +189,26 @@ const CodeSpace = ({ layout, setSrcDoc }) => {
                 {lang.name}
               </div>
             </div>
-            <div
-              className="animated-icon text-gray-500 mr-6"
-              onClick={() => lang.function("")}
-            >
-              <FaTrash />
+            <div className="flex gap-4 mr-4">
+              <div
+                className="animated-icon text-gray-500"
+                onClick={() => lang.function("")}
+              >
+                <FaTrash />
+              </div>
+              <div
+                className="animated-icon text-gray-500 text-lg"
+                onClick={() => {
+                  if (lang.value) {
+                    navigator.clipboard.writeText(lang.value);
+                    toast(`Copied ${lang.name} to clipboard`);
+                  } else {
+                    alert(`${lang.name} is empty`);
+                  }
+                }}
+              >
+                <BiSolidCopy />
+              </div>
             </div>
           </div>
           <div className="bg-tabGray h-full overflow-auto">
