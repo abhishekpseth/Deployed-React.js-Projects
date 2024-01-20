@@ -37,7 +37,7 @@ const Projects = ({ sortOption, stack }) => {
     },
     {
       projectNo: 5,
-      projectName: "Code Editor",
+      projectName: "Code Editors",
       imgSrc: "././images/code-editor.jpg",
       github: "https://github.com/abhishekpseth/Deployed-React.js-Projects/tree/main/Code%20Editor",
       weblink: "https://codeeditor-project.netlify.app/",
@@ -48,7 +48,7 @@ const Projects = ({ sortOption, stack }) => {
       imgSrc: "././images/search-bar.jpg",
       github: "https://github.com/abhishekpseth/Deployed-React.js-Projects/tree/main/Search%20Bar%20with%20Chips",
       weblink: "https://search-bar-with-chips.netlify.app/",
-    }
+    },
   ];
 
   const jsProjectsArray = [
