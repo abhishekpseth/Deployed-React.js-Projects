@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import EditorContext from "./EditorContext";
 
 const EditorContextProvider = ({ children }) => {
@@ -9,6 +9,25 @@ const EditorContextProvider = ({ children }) => {
   const [autoSave, setAutoSave] = useState(false);
   const [isFullScreen, setFullScreen] = useState(false);
   const [isDownloading, setDownload] = useState(false);
+  const [device, setDevice] = useState("pc");
+
+  useEffect(() => {
+    const handleResize = () => {
+      const screenSize = window.innerWidth;
+      if (screenSize < 640) {
+        setDevice("mobile");
+      } else if (screenSize < 768) {
+        setDevice("tablet");
+      } else {
+        setDevice("pc");
+      }
+    };
+    window.addEventListener("resize", handleResize);
+    handleResize();
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
     <EditorContext.Provider
       value={{
@@ -26,6 +45,7 @@ const EditorContextProvider = ({ children }) => {
         setFullScreen,
         isDownloading,
         setDownload,
+        device,
       }}
     >
       {children}

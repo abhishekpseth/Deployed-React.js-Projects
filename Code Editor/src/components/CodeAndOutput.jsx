@@ -1,30 +1,28 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import Split from "react-split";
 import CodeSpace from "./CodeSpace";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
+import EditorContext from "../context/EditorContext";
 
 const CodeAndOutput = () => {
   const [srcDoc, setSrcDoc] = useState("");
+  const { device } = useContext(EditorContext);
   let { layout } = useParams();
   if (layout === undefined) layout = "left";
+
   const [codeSpaceSize, setCodeSpaceSize] = useState(50);
 
   useEffect(() => {
-    const handleResize = () => {
-      const screenSize = window.innerWidth;
-      if (layout === "left" && screenSize < 600) {
-        window.location.replace("/layout/top");
-      } else if (layout === "right" && screenSize < 600) {
-        window.location.replace("/layout/bottom");
-      }
-    };
-    window.addEventListener("resize", handleResize);
-    handleResize();
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+    if (layout === "left" && (device == "mobile" || device === "tablet")) {
+      window.location.replace("/layout/top");
+    } else if (
+      layout === "right" &&
+      (device == "mobile" || device === "tablet")
+    ) {
+      window.location.replace("/layout/bottom");
+    }
+  }, [device]);
 
   return (
     <Split

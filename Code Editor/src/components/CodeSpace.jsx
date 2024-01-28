@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import { BiSolidCopy } from "react-icons/bi";
 import { DiHtml5, DiJavascript } from "react-icons/di";
 import { FaCss3Alt, FaTrash } from "react-icons/fa";
@@ -83,8 +83,19 @@ const CodeSpace = ({ layout, setSrcDoc, codeSpaceSize, setCodeSpaceSize }) => {
     }
   }, [clearAll]);
 
+  const debouncedEffect = (fn, delay) => {
+    let timer;
+    return function (...args) {
+      clearTimeout(timer);
+      timer = setTimeout(() => {
+        fn(...args);
+      }, delay);
+    };
+  };
+
   useEffect(() => {
-    setSrcDoc(`
+    const debouncedFunction = debouncedEffect(() => {
+      setSrcDoc(`
         <html>
           <body>${html}</body>
           <style>${css}</style>
@@ -92,12 +103,14 @@ const CodeSpace = ({ layout, setSrcDoc, codeSpaceSize, setCodeSpaceSize }) => {
         </html>
       `);
 
-    localStorage.setItem("stored-autoSave", autoSave.toString());
-    if (autoSave === true) {
-      localStorage.setItem("html-code", JSON.stringify(html));
-      localStorage.setItem("css-code", JSON.stringify(css));
-      localStorage.setItem("js-code", JSON.stringify(js));
-    }
+      localStorage.setItem("stored-autoSave", autoSave.toString());
+      if (autoSave === true) {
+        localStorage.setItem("html-code", JSON.stringify(html));
+        localStorage.setItem("css-code", JSON.stringify(css));
+        localStorage.setItem("js-code", JSON.stringify(js));
+      }
+    }, 2000);
+    debouncedFunction();
   }, [html, css, js, autoSave]);
 
   useEffect(() => {
@@ -164,20 +177,7 @@ const CodeSpace = ({ layout, setSrcDoc, codeSpaceSize, setCodeSpaceSize }) => {
     },
   ];
 
-  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 768);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsSmallScreen(window.innerWidth < 768);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
+  const { device } = useContext(EditorContext);
   const [langTabActive, setLangTabActive] = useState("HTML");
   const [isResultTabActive, setResultTabActive] = useState(true);
 
@@ -191,7 +191,7 @@ const CodeSpace = ({ layout, setSrcDoc, codeSpaceSize, setCodeSpaceSize }) => {
     }
   }, [isResultTabActive]);
 
-  if (isSmallScreen) {
+  if (device === "mobile" || device === "tablet") {
     return (
       <div className="h-full bg-backgroundBlack">
         <div className="flex gap-1 text-white text-[14px]">

@@ -37,7 +37,7 @@ const NavBar = () => {
   const [showDrawer, setShowDrawer] = useState(false);
 
   return (
-    <div className="flex items-center justify-between px-4 py-3 text-white bg-black border border-gray-700 lg:border-none">
+    <div className="flex items-center justify-between px-4 py-3 text-white bg-black">
       <div className="flex items-center justify-start gap-2">
         <div className="text-2xl lg:text-3xl">
           <FaCodepen />
@@ -57,7 +57,7 @@ const NavBar = () => {
               onBlur={() => setNameEditable(false)} // when input looses focus
               spellCheck="false"
               className="text-white bg-transparent border-none outline-none max-w-[60vw] sm:max-w-[20vw] lg:max-w=[20vw] xl:max-w-[40vw] overflow-hidden"
-            /> 
+            />
             <button ref={penRef}>
               <FaPen
                 onClick={() => {

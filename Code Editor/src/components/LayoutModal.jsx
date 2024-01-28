@@ -1,30 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { LuLayoutPanelTop } from "react-icons/lu";
 import { useParams } from "react-router-dom";
+import EditorContext from "../context/EditorContext";
 
 const LayoutModal = ({ isLayoutModalOpen }) => {
   let { layout } = useParams();
   if (layout === undefined) layout = "left";
 
-  const [device, setDevice] = useState("pc");
-
-  useEffect(() => {
-    const handleResize = () => {
-      const screenSize = window.innerWidth;
-      if (screenSize < 640) {
-        setDevice("mobile");
-      } else if (screenSize < 768) {
-        setDevice("tablet");
-      } else {
-        setDevice("pc");
-      }
-    };
-    window.addEventListener("resize", handleResize);
-    handleResize();
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+  const { device } = useContext(EditorContext);
 
   const layoutsArray = [
     {
