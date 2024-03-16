@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.hide-scroller::-webkit-scrollbar {
+  display: none;
+}
+
+/* 
+.highlight-border:focus-within {
+  border: 2px solid blue; 
+} */
+
+textarea {
+  resize: none;
+}

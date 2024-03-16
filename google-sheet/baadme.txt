@@ -1,0 +1,65 @@
+import React, { useState, useEffect, useRef } from "react";
+
+const Sheet = () => {
+  const [totalRows, setTotalRows] = useState(100);
+  const [totalCols, setTotalCols] = useState(26);
+  const [grid, setGrid] = useState(
+    Array.from({ length: totalRows }, () => Array(totalCols).fill(0))
+  );
+
+  const gridRef = useRef();
+  const titleRowRef = useRef();
+
+  const handleGridScroll = () => {
+    if (titleRowRef.current) {
+      titleRowRef.current.scrollLeft = gridRef.current.scrollLeft;
+    }
+  };
+
+  return (
+    <div>
+      <div></div>
+      <div className="flex flex-col">
+        <div
+          ref={titleRowRef}
+          className="grid w-full h-[5vh] bg-blue-500 overflow-x-scroll title-row"
+          style={{
+            gridTemplateColumns: `repeat(${totalRows},1fr)`,
+          }}
+        >
+          {grid[0].map((col, colIndex) => {
+            return (
+              <input
+                key={colIndex}
+                value={String.fromCharCode(colIndex + 65)}
+                className="border border-black grid text-center"
+              />
+            );
+          })}
+        </div>
+
+        <div
+          ref={gridRef}
+          className="bg-red-400 flex-1 w-full grid overflow-x-scroll max-h-[85vh] max-w-[95vw]"
+          onScroll={handleGridScroll}
+          style={{
+            gridTemplateColumns: `repeat(${totalCols},1fr)`,
+          }}
+        >
+          {grid.map((row, rowIndex) => {
+            return row.map((node, colIndex) => {
+              return (
+                <input
+                  key={rowIndex - colIndex}
+                  className="border border-black"
+                />
+              );
+            });
+          })}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Sheet;
